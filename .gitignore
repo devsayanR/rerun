@@ -1,68 +1,82 @@
+# ==============================
+# OS-Specific Files
+# ==============================
 .DS_Store
 __MACOSX
 
-# C++ and CMake stuff:
+# ==============================
+# C++ / CMake
+# ==============================
 *.a
 *.bin
 *.o
+*.tgz
 /arrow/
-./build/
-**/build-msvc/
+**/build*/
 **/CMakeFiles/
 **/CMakeCache.txt
 **/Makefile
 **/cmake_install.cmake
-_deps
+**/_deps
 **/.cache/
-**/rerun_cpp/docs/html
-**/rerun_cpp/docs/xml
-*.tgz
+**/rerun_cpp/docs/{html,xml}
 
-# Rust compile target directory:
-**/target
-**/target_ra
-**/target_wasm
+# ==============================
+# Rust
+# ==============================
+**/target*/
+**/target_ra/
+**/target_wasm/
 
-# Python virtual environment:
-**/venv*
-**/.venv*
+# ==============================
+# Python
+# ==============================
+# Virtual Environments
+**/venv*/
+**/.venv*/
 .python-version
 
-# Python build artifacts:
-__pycache__
-*.pyc
+# Build Artifacts
+__pycache__/
+*.py[cod]
 *.pyd
 *.so
-**/.pytest_cache
+**/.pytest_cache/
 
-# Pixi environment
-.pixi
+# ==============================
+# Pixi Environment
+# ==============================
+.pixi/
 
-# Unpacked test assets:
+# ==============================
+# Unpacked Test Assets
+# ==============================
 /tests/assets/rerun.obj
+**/dataset/
 
+# ==============================
+# Logs / Debugging
+# ==============================
 .gdb_history
 perf.data*
 
-**/dataset/
+# ==============================
+# Saved / Temporary Files
+# ==============================
+example_data/
+*.rrd
+/meilisearch/
 
-# Screenshots from samples etc.
+# ==============================
+# Screenshots & Snapshots
+# ==============================
 screenshot*.png
-
-# Saved example `.rrd` files
-example_data
-
-# Various builds
-dist
-wheels
-
-# Screenshot comparison build
-/compare_screenshot
+/compare_screenshot/
 **/tests/snapshots/**/*.diff.png
 **/tests/snapshots/**/*.new.png
 
-*.rrd
-
-/meilisearch
-
-.pixi/*
+# ==============================
+# Build / Distribution
+# ==============================
+dist/
+wheels/
